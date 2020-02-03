@@ -1,0 +1,48 @@
+---
+title: "My Rmd document"
+author: "James Lee"
+date: '`r format(Sys.Date(), "%B %d, %Y")`'
+output: bookdown::html_document2
+bibliography: 'example.bib'
+---
+Here is some inline code `r 1 + 1`
+```{r setup, echo=FALSE}
+library(tidyverse)
+```
+
+```{r}
+print("Let's first start with the classic: Hello World")
+```
+
+```{r starwars-plot, fig.cap = "a ggplot of stuf"}
+library(tidyverse)
+starwars %>% filter(species == "Human") %>% 
+  ggplot(aes(x = height, 
+      y = mass)) +
+  geom_point()
+```
+
+We can see in Figure \@ref(fig:starwars-plot)
+
+```{r starwars-tbl}
+starwars %>% filter(species == "Human") %>%
+  select(name,
+         height,
+         mass,
+         homeworld) %>%
+  knitr::kable(caption = "A knitr kable table of starwars data")
+```
+
+We can see in Table \@ref(tab:starwars-tbl)
+
+```{r, my-fig, fig.cap = "My non-code figure"}
+knitr::include_graphics("figures/my-image-file.png")
+```
+
+We can see in Figure \@ref(fig:my-fig)
+@barba2018terminologies says useful things
+
+about stuff [@barba2018terminologies]
+
+
+# References cited
