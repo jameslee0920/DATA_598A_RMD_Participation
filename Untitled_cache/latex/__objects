@@ -1,0 +1,3 @@
+setup_data	df_loaded
+starwars-tbl	data	.Random.seed
+load_tables	data	df

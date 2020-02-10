@@ -1,0 +1,3 @@
+setup_data	::	df	library
+starwars-tbl	%>%	==	data.table	filter	height	homeworld	library	mass	name	select	species	starwars
+load_tables	%>%	==	data.table	filter	height	homeworld	library	mass	name	select	skin_color	species	starwars

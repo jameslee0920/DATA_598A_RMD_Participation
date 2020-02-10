@@ -36,7 +36,7 @@ starwars %>% filter(species == "Human") %>%
 We can see in Table \@ref(tab:starwars-tbl)
 
 ```{r, my-fig, fig.cap = "My non-code figure"}
-knitr::include_graphics("figures/my-image-file.png")
+knitr::include_graphics("figures/my-image-file.png", dpi = 200)
 ```
 
 We can see in Figure \@ref(fig:my-fig)
